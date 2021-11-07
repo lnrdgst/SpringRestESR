@@ -5,14 +5,14 @@ import org.springframework.stereotype.Component;
 
 import com.algaworks.algafood.di.modelo.Cliente;
 
-@Qualifier("normal")//normal = identificação a ser chamado no AtivacaoClienteService
+@Qualifier("urgente")// urgente = identificação a ser chamado no AtivacaoClienteService
 @Component
-public class NotificadorEmail implements Notificador {
+public class NotificadorSMS implements Notificador {
 
 	@Override
 	public void notificar(Cliente cliente, String mensagem) {
 
-		System.out.printf("Notificando %s através do email %s: %s\n", cliente.getNome(), cliente.getEmail(), mensagem);
+		System.out.printf("Notificando %s por SMS através do número %s: %s\n", cliente.getNome(), cliente.getTelefone(), mensagem);
 	}
 
 }
