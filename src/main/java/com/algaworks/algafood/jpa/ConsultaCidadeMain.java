@@ -23,6 +23,8 @@ public class ConsultaCidadeMain {
 		
 		for (Cidade cidade: cidades) {
 			System.out.printf("%s - %s\n", cidade.getNome(), cidade.getEstado().getNome()); 
+			
+			
 		}
 				
 	}
